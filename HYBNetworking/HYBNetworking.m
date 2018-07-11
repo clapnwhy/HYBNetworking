@@ -751,6 +751,12 @@ static inline NSString *cachePath() {
       // 设置允许同时最大并发数量，过大容易出问题
       manager.operationQueue.maxConcurrentOperationCount = 3;
       sg_sharedManager = manager;
+      
+      //Https相关设置
+        AFSecurityPolicy *securityPolicy = [AFSecurityPolicy defaultPolicy];
+        securityPolicy.allowInvalidCertificates = YES;
+        manager.securityPolicy = securityPolicy;
+      
     }
   }
   
