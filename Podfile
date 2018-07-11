@@ -3,6 +3,6 @@ inhibit_all_warnings!
 
 target "AFNetworkingDemo" do
 
-pod 'AFNetworking', '~> 3.0.4'
+pod 'AFNetworking', :git => 'https://github.com/clapnwhy/AFNetworking.git'
 
 end
